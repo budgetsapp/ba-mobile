@@ -4,4 +4,5 @@ export class Theme {
   static lightBrown = '#ddd0c8';
   static brown = '#988a87';
   static darkBrown = '#817070';
+  static red = '#ff7070';
 }

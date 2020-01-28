@@ -1,13 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 import { Input } from '../../components/atoms';
-import { TextInput, StyleSheet } from 'react-native';
+import { ErrorLabel } from '../../components/atoms';
 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
     marginBottom: 10
+  },
+  errorLabelContainer: {
+    justifyContent: 'center',
+    height: 18
   }
 });
 
@@ -16,17 +20,22 @@ type Props = {
   errorMessage: string;
   value: string;
   onChangeText: (value: string) => undefined;
+  onBlur?: () => undefined;
 };
 
 export function FormInput({
   placeholder,
   errorMessage,
   value,
-  onChangeText
+  onChangeText,
+  onBlur
 }: Props) {
   return (
     <View style={styles.container}>
-      <Input value={value} onChangeText={onChangeText} />
+      <Input value={value} onChangeText={onChangeText} onBlur={onBlur} />
+      <View style={styles.errorLabelContainer}>
+        <ErrorLabel text={errorMessage} />
+      </View>
     </View>
   );
 }

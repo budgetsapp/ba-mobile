@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
 import { Theme } from '../../components/theme';
 
@@ -19,12 +19,18 @@ const styles = StyleSheet.create({
 type Props = {
   onPress: () => undefined;
   text: string;
+  disabled?: boolan;
 };
 
-export function Button({ onPress, text }: Props) {
+Button.defaultProps = {
+  disabled: false
+};
+
+export function Button({ onPress, text, disabled }: Props) {
+  const Wrapper = disabled ? View : TouchableOpacity;
   return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
+    <Wrapper onPress={onPress} style={styles.container}>
       <Text>{text}</Text>
-    </TouchableOpacity>
+    </Wrapper>
   );
 }

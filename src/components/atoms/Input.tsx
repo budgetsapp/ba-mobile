@@ -16,14 +16,16 @@ const styles = StyleSheet.create({
 type Props = {
   value: string;
   onChangeText: (value: string) => undefined;
+  onBlur?: () => undefined;
 };
 
-export function Input({ value, onChangeText }: Props) {
+export function Input({ value, onChangeText, onBlur }: Props) {
   return (
     <TextInput
       style={styles.input}
       onChangeText={value => onChangeText(value)}
       value={value}
+      onBlur={onBlur}
     />
   );
 }
