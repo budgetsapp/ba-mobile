@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  onPress: () => undefined;
+  onPress: () => void;
   text: string;
-  disabled?: boolan;
+  disabled?: boolean;
 };
 
 Button.defaultProps = {

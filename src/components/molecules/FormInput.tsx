@@ -19,8 +19,8 @@ type Props = {
   placeholder: string;
   errorMessage: string;
   value: string;
-  onChangeText: (value: string) => undefined;
-  onBlur?: () => undefined;
+  onChangeText: (value: string) => void;
+  onBlur?: (e: any) => void;
 };
 
 export function FormInput({

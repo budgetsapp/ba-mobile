@@ -35,8 +35,8 @@ type FormValues = {
 type Props = {
   onSubmit: (
     values: FormValues,
-    setSubmitting: (value: boolean) => undefined
-  ) => undefined;
+    setSubmitting: (value: boolean) => void
+  ) => void;
 };
 
 const formSchema = Yup.object().shape({

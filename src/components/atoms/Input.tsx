@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
 
 type Props = {
   value: string;
-  onChangeText: (value: string) => undefined;
-  onBlur?: () => undefined;
+  onChangeText: (value: string) => void;
+  onBlur?: (e: any) => void;
 };
 
 export function Input({ value, onChangeText, onBlur }: Props) {
