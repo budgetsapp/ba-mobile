@@ -1,4 +1,20 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export const SignupView = () => <Text>SignupView</Text>;
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'blue',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+});
+
+export function SignupView() {
+  return (
+    <View style={styles.container}>
+      <Text>SignupView</Text>
+    </View>
+  );
+}
