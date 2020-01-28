@@ -7,6 +7,9 @@ import { FormInput } from '../../../components/molecules';
 import { Button } from '../../../components/atoms';
 import { Theme } from '../../../components/theme';
 
+const DEFAULT_LOGIN = 'ba-user-1';
+const DEFAULT_PASSWORD = 'ba-password';
+
 const styles = StyleSheet.create({
   mainContainer: {
     width: '100%',
@@ -55,8 +58,8 @@ export function SigninView({ onSubmit }: Props) {
   return (
     <Formik
       initialValues={{
-        login: '',
-        password: ''
+        login: DEFAULT_LOGIN,
+        password: DEFAULT_PASSWORD
       }}
       validationSchema={formSchema}
       onSubmit={(values, { setSubmitting }) => onSubmit(values, setSubmitting)}

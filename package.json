@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "ba-auth-api-client": "budgetsapp/ba-auth-api-client#master",
     "expo": "~36.0.0",
     "formik": "^2.1.2",
     "react": "~16.9.0",
