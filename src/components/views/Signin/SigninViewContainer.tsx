@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SigninView } from './SigninView';
-import BaAuthApiClient from 'ba-auth-api-client/dist/ba-auth-api-client';
+import BaAuthApiClient from 'ba-auth-api-client';
 import { storage } from '../../../services/storage';
 
 const URL = 'http://192.168.54.184:5011';
