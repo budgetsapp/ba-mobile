@@ -1,13 +1,13 @@
 import { AsyncStorage } from 'react-native';
 
 export const storage = {
-  getItem: function(key) {
-    // return storage[key];
+  getItem: async function(key) {
+    return await AsyncStorage.getItem(key);
   },
-  setItem: (key, value) => {
-    AsyncStorage.setItem(key, value);
+  setItem: async (key, value) => {
+    await AsyncStorage.setItem(key, value);
   },
-  removeItem: key => {
-    AsyncStorage.removeItem(key);
+  removeItem: async key => {
+    await AsyncStorage.removeItem(key);
   }
 };

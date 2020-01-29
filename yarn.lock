@@ -2952,7 +2952,7 @@ axios@^0.17.1:
 
 ba-auth-api-client@budgetsapp/ba-auth-api-client#master:
   version "1.0.0"
-  resolved "https://codeload.github.com/budgetsapp/ba-auth-api-client/tar.gz/86afe737423711563784093a85ddc1711a95d9be"
+  resolved "https://codeload.github.com/budgetsapp/ba-auth-api-client/tar.gz/d85d1698900639c2d999d5e25ed0b015552cce8d"
   dependencies:
     "@babel/core" "^7.8.3"
     "@babel/plugin-transform-runtime" "^7.8.3"
